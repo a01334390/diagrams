@@ -1,0 +1,8 @@
+UseCaseDiagram [frame=true framecolor=steelblue label="Transportista Use Case Diagram"] {
+	attribute usecase [fillcolor=paleturquoise]
+  actor tra as "Transportista"
+  system s as "Sistema de donacion" [fillcolor=whitesmoke] {
+  	usecase u1 as "Transportar bolsa de sangre"
+  }
+  tra "1" -- "..*" u1
+}

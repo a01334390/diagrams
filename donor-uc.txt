@@ -1,0 +1,18 @@
+UseCaseDiagram [frame=true framecolor=steelblue label="Donor Use Case Diagram"] {
+	attribute usecase [fillcolor=paleturquoise]
+  actor don as "Donador"
+  actor doc as "Doctor"
+  system s as "Sistema de donacion" [fillcolor=whitesmoke] {
+  	usecase u1 as "Iniciar proceso(s) de\n donacion de sangre"
+    usecase u2 as "Recibir tokens"
+    usecase u4 as "Gastar Tokens"
+    usecase u3 as "Hacer seguimiento de\n bolsa(s) de sangre"
+    usecase u5 as "Crear un perfil basico"
+  }
+  don "1" -- "0..*" u1
+  don "1" -- "*" u2
+  don "1" -- "0..*" u3
+  don "1" -- "0..*" u4
+  doc "1" -- "0..*" u3
+  don "1" -- "1" u5
+}
